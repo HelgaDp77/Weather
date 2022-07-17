@@ -1,0 +1,98 @@
+.all {
+  background-image: url("https://i.pinimg.com/564x/cf/56/2b/cf562b8128e55957be45acadc4f63745.jpg");
+  background-size: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+h1,
+.temperature,
+.units {
+  color: rgb(16, 77, 94);
+  font-size: 35px;
+}
+
+.form-control {
+  background-color: #a0c1f3;
+  border-radius: 10px 10px 10px 10px;
+
+  width: 280px;
+  height: 38px;
+}
+
+.button {
+  border-radius: 10px 10px 10px 10px;
+  border: 0;
+
+  font-size: 16px;
+
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgb(90, 90, 255);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.button:hover {
+  background-color: rgb(125, 153, 255);
+}
+
+.button:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.col-4 {
+  color: rgb(12, 70, 86);
+}
+
+.sun {
+  font-size: 80px;
+}
+
+.temp {
+  text-align: center;
+  color: rgb(16, 77, 94);
+  font-size: 20px;
+}
+
+h3,
+li {
+  text-align: center;
+  color: rgb(16, 77, 94);
+  font-size: 25px;
+}
+
+.col-sm,
+.col-3,
+.col-6 {
+  font-size: 20px;
+  color: rgb(16, 77, 94);
+}
+
+.col-3,
+container-fluid {
+  text-align: center;
+  border: 2px solid rgb(42, 18, 255);
+  border-radius: 10px;
+}
+
+ul {
+  margin: 0px auto;
+  padding: 0;
+  text-align: center;
+}
+
+col-6,
+col-4 {
+  border: 5px solid rgb(142, 247, 121);
+}

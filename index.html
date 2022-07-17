@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Weather</title>
+</head>
+    <body class="all">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm">
+            <div class="row">
+              <div class="col-6">
+                <h1> WEATHER </h1>
+                <h1 id="city">Dnipro</h1>
+                <span class="temperature" id="temperature">31°</span>
+                <span class="units">
+                  <span class="cel" id="celsium"><a href="#">°C</a></span> |
+                  <span id="fahrenheit"><a href="#">°F</a></span></span>
+                <br>
+                <span class="sun">☀️</span>
+                <div class="sunny">
+                  sunny
+                </div>
+              </div>
+              <div class="col-6">
+                <form class="search-form" id="searching-form">
+                  <input type="search" placeholder="Type a city.." class="form-control shadow-sm" autofocus="on"
+                    autocomplete="off" id="search-engine" />
+                  <input type="submit" value="Search" class="button" autocomplete="off" />
+                  <input
+                  type="submit"
+                  value="Current Location"
+                  class="button"
+                  autocomplete="off"
+                  id="current-button" />
+                   <div class="temp">
+                   </br>
+                    sunrise 7:00
+                    </br>
+                    sunset 19:20
+                    </br>
+                    💨 Wind from the south
+                  </div>
+              </div>
+              <br>
+          <ul>
+            <li id="curr-date">
+            </li>
+          </ul>
+            </div>
+              <br>
+              <h3>
+              Weather details
+              </h3>
+            <div class="row">
+              <div class="col-3">
+                Wind
+                <br>
+                7km/h
+              </div>
+    
+              <div class="col-3">
+                Humidity
+                <br>
+                43%
+              </div>
+              <div class="col-3">
+                Air Pressure
+                1015 mb
+              </div>
+              <div class="col-3">
+                Precipitacion
+                2%
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="row">
+              <div class="col-3">
+                <strong>Date</strong>
+                </br>
+                9 Jun (Thu)
+                </br>
+                </br>
+                10 Jun (Fri)
+                </br>
+                </br>
+                11 Jun (Sat)
+                </br>
+                </br>
+                12 Jun (Sun)
+                </br>
+                </br>
+                13 Jun (Mon)
+                <br>
+              </div>
+              <div class="col-3">
+                <strong>Temp°C</strong>
+                <br>
+                18°C/32°C
+                <br>
+                <br>
+                20°C/33°C
+                <br>
+                <br>
+                20°C/34°C
+                <br>
+                <br>
+                22°C/33°C
+                <br>
+                <br>
+                21°C/36°C
+              </div>
+              <div class="col-3">
+                <strong>Cond</strong>
+                <br>
+                ☀️
+                <br>
+                <br>
+                ☀️
+                <br>
+                <br>
+                ☀️
+                <br>
+                <br>
+                ☁️
+                <br>
+                <br>
+                ☁️
+              </div>
+              <div class="col-3">
+                <strong>Description</strong>
+                <br>
+                Mainly sunny
+                <br>
+                <br>
+                Mainly sunny
+                <br>
+                <br>
+                Mainly sunny
+                <br>
+                <br>
+                Cloudy
+                <br>
+                <br>
+                Cloudy
+    
+              </div>
+            </div>
+              <br>
+              <h3>
+              Phases of the moon
+              </h3>
+            <div class="row">
+              <div class="col-3">
+    
+                Jun 21<br>
+                Waning Half Last Qtr
+                🌒
+    
+              </div>
+    
+              <div class="col-3">
+                Jun 29 <br>
+                New Moon <br>
+                🌘
+              </div>
+              <div class="col-3">
+                Jul 7 <br>
+                Waxing Gibbous
+                🌗
+              </div>
+              <div class="col-3">
+                Jul 13 <br>
+                Full Moon <br>
+                🌕
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<script src="src/index.js"></script>
+</body>
+
+</html>
