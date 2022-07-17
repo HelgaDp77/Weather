@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Weather</title>
+    <style>
+ .all {
+    background-image: url('https://i.pinimg.com/564x/cf/56/2b/cf562b8128e55957be45acadc4f63745.jpg');    
+    background-size: 100%;
+    margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  } 
+  h1,.temperature, .units{
+    color:rgb(16, 77, 94); 
+     font-size:35px;
+    } 
+    .form-control {
+    background-color: #a0c1f3;
+  border-radius:  10px 10px 10px 10px;
+ 
+  width:280px;
+height:38px;
+}
+.button {
+  border-radius: 10px 10px 10px 10px;
+  border: 0;
+
+  font-size: 16px;
+  
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgb(90, 90, 255);
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+.button:hover {
+  background-color: rgb(125, 153, 255);
+}
+.button:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, .6);
+}      
+.col-4 {
+  color: rgb(12, 70, 86);
+}
+
+
+.sun {
+  font-size: 80px;
+}
+
+.temp {
+  text-align: center;
+  color:rgb(16, 77, 94); 
+  font-size:20px;
+}
+h3, li {
+  text-align: center;
+  color:rgb(16, 77, 94); 
+  font-size:25px;
+}
+  .col-sm, .col-3, .col-6 {
+    font-size:20px; 
+    color:rgb(16, 77, 94);
+  }
+.col-3 {
+  text-align: center; 
+  border: 1px solid rgb(121, 219, 247);
+  border-radius: 10px;
+}
+
+ul {
+    margin: 0px auto;  
+  padding: 0;
+  text-align: center;
+}
+</style>
+</head>
+<body class="all">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <div class="row">
+          <div class="col-6">
+            <h1> WEATHER </h1>
+            <h1 id="city">Dnipro</h1>
+            <span class="temperature" id="temperature">31°</span>
+            <span class="units">
+              <span class="cel" id="celsium"><a href="#">°C</a></span> |
+              <span id="fahrenheit"><a href="#">°F</a></span></span>
+            <br>
+            <span class="sun">☀️</span>
+            <div class="sunny">
+              sunny
+            </div>
+          </div>
+          <div class="col-6">
+            <form class="search-form" id="searching-form">
+              <input type="search" placeholder="Type a city.." class="form-control shadow-sm" autofocus="on"
+                autocomplete="off" id="search-engine" />
+              <input type="submit" value="Search" class="button" autocomplete="off" />
+              <input
+              type="submit"
+              value="Current Location"
+              class="button"
+              autocomplete="off"
+              id="current-button" />
+               <div class="temp">
+                feels like 23°C
+                </br>
+                sunrise 7:00
+                </br>
+                sunset 19:20
+                </br>
+                💨 Wind from the south
+              </div>
+          </div>
+          <br>
+          <ul>
+            <li id="curr-date">
+            </li>
+          </ul>
+        </div>
+          <br>
+          <h3>
+          Weather details
+          </h3>
+        <div class="row">
+          <div class="col-3">
+            Wind
+            <br>
+            7km/h
+          </div>
+
+          <div class="col-3">
+            Humidity
+            <br>
+            43%
+          </div>
+          <div class="col-3">
+            Air Pressure
+            1015 mb
+          </div>
+          <div class="col-3">
+            Precipitacion
+            2%
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="row">
+          <div class="col-3">
+            <strong>Date</strong>
+            </br>
+            9 Jun (Thu)
+            </br>
+            </br>
+            10 Jun (Fri)
+            </br>
+            </br>
+            11 Jun (Sat)
+            </br>
+            </br>
+            12 Jun (Sun)
+            </br>
+            </br>
+            13 Jun (Mon)
+            <br>
+          </div>
+          <div class="col-3">
+            <strong>Temp°C</strong>
+            <br>
+            18°C/32°C
+            <br>
+            <br>
+            20°C/33°C
+            <br>
+            <br>
+            20°C/34°C
+            <br>
+            <br>
+            22°C/33°C
+            <br>
+            <br>
+            21°C/36°C
+          </div>
+          <div class="col-3">
+            <strong>Cond</strong>
+            <br>
+            ☀️
+            <br>
+            <br>
+            ☀️
+            <br>
+            <br>
+            ☀️
+            <br>
+            <br>
+            ☁️
+            <br>
+            <br>
+            ☁️
+          </div>
+          <div class="col-3">
+            <strong>Description</strong>
+            <br>
+            Mainly sunny
+            <br>
+            <br>
+            Mainly sunny
+            <br>
+            <br>
+            Mainly sunny
+            <br>
+            <br>
+            Cloudy
+            <br>
+            <br>
+            Cloudy
+
+          </div>
+        </div>
+          <br>
+          <h3>
+          Phases of the moon
+          </h3>
+        <div class="row">
+          <div class="col-3">
+
+            Jun 21<br>
+            Waning Half Last Qtr
+            🌒
+
+          </div>
+
+          <div class="col-3">
+            Jun 29 <br>
+            New Moon <br>
+            🌘
+          </div>
+          <div class="col-3">
+            Jul 7 <br>
+            Waxing Gibbous
+            🌗
+          </div>
+          <div class="col-3">
+            Jul 13 <br>
+            Full Moon <br>
+            🌕
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+ // Conversion
+function convertToFahrenheit() {
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = "87.8";
+}
+let temperatureFahrenheit = document.querySelector("#fahrenheit");
+temperatureFahrenheit.addEventListener("click", convertToFahrenheit);
+function convertToCelsium() {
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = "31";
+}
+let temperatureCelsium = document.querySelector("#celsium");
+temperatureCelsium.addEventListener("click", convertToCelsium);
+
+
+
+// Date
+function dateTime(currDate) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "Spetember",
+    "October",
+    "November",
+    "December"
+  ];
+
+  let date = currDate.getDate();
+  let month = months[currDate.getMonth()];
+  let day = days[currDate.getDay()];
+  let hours = currDate.getHours();
+  if (hours < 10) hours = "0" + hours;
+  let minutes = currDate.getMinutes();
+  if (minutes < 10) minutes = "0" + minutes;
+
+  return `${day}, ${month} ${date} ${hours}:${minutes}`;
+}
+
+let existingDate = document.querySelector("#curr-date");
+let currDate = new Date();
+existingDate.innerHTML = dateTime(currDate);
+
+//Geolocation API
+function handlePosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let units = "metric";
+  let apiKey = "dc1f6acef2197a10a6392befe52ea1bf";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let url = `${apiEndpoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(url).then(showTemperature);
+}
+
+function getLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(handlePosition);
+}
+
+let currentButton = document.querySelector("#current-button");
+currentButton.addEventListener("click", getLocation);
+
+
+
+function showTemperature(response) {
+  let temp = document.querySelector("#temperature");
+  let temperature = Math.round(response.data.main.temp);
+  temp.innerHTML = `${temperature}`;
+}
+
+function showCity(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-engine");
+  let city = document.querySelector("#city");
+  city.innerHTML = `${searchInput.value}`;
+  let apiKey = "dc1f6acef2197a10a6392befe52ea1bf";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&app=id${apiKey}`).then(showTemperature);
+}
+
+let citySearch = document.querySelector("#searching-form");
+citySearch.addEventListener("submit", showCity);
+
+</script>
+</body>
+</html>
