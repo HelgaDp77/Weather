@@ -1,3 +1,15 @@
+ let humidityElement = document.querySelector(".humidity");
+ 
+  humidityElement.innerHTML = response.data.main.humidity;
+
+  let windElement = document.querySelector("#wind");  
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+
+
+
+
+
 function convertToFahrenheit() {
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = "...";
