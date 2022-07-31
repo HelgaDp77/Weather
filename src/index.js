@@ -1,6 +1,4 @@
 
-}
-
 // Conversion
 
 let temperatureCelsium = document.querySelector("#celsium");
