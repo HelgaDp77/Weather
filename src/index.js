@@ -1,3 +1,14 @@
+function convertToFahrenheit() {
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = "...";
+}
+let temperatureFahrenheit = document.querySelector("#fahrenheit");
+temperatureFahrenheit.addEventListener("click", convertToFahrenheit);
+function convertToCelsium() {
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = "...";
+}
+
 // Conversion
 
 let temperatureCelsium = document.querySelector("#celsium");
