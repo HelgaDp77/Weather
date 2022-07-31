@@ -36,10 +36,10 @@ function displayCelsiusTemperature(event) {
     temperatureElement.innerHTML = Math.round(celsiumTemperature);
 }
 
-let fahrenheitLink = document.querySelector("#fahrenheit");
+let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiumLink = document.querySelector("#celsium");
+let celsium = document.querySelector("#celsium");
 celsium.addEventListener("click", displayCelsiumTemperature);
 
 
