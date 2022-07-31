@@ -1,4 +1,5 @@
 
+}
 
 // Conversion
 
@@ -17,7 +18,7 @@ function displayFahrenheitTemperature(event) {
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-function displayCelsiusTemperature(event) {
+function displayCelsiumTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
     
