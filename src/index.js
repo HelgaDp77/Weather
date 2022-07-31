@@ -1,14 +1,5 @@
 // Conversion
-function convertToFahrenheit() {
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = "...";
-}
-let temperatureFahrenheit = document.querySelector("#fahrenheit");
-temperatureFahrenheit.addEventListener("click", convertToFahrenheit);
-function convertToCelsium() {
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = "...";
-}
+
 let temperatureCelsium = document.querySelector("#celsium");
 temperatureCelsium.addEventListener("click", convertToCelsium);
 
@@ -17,10 +8,10 @@ function displayFahrenheitTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
     
-    celsiusLink.classList.remove("active");
-    fahrenheitLink.classList.add("active");
+    celsium.classList.remove("active");
+    fahrenheit.classList.add("active");
     
-    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+    let fahrenheitTemperature = (celsiumTemperature * 9) / 5 + 32;
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
@@ -28,17 +19,17 @@ function displayCelsiusTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
     
-    celsiusLink.classList.add("active");
-    fahrenheitLink.classList.remove("active");
+    celsium.classList.add("active");
+    fahrenheit.classList.remove("active");
     
-    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    temperatureElement.innerHTML = Math.round(celsiumTemperature);
 }
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+let celsiumLink = document.querySelector("#celsium");
+celsium.addEventListener("click", displayCelsiumTemperature);
 
 
 
