@@ -1,4 +1,4 @@
- // Conversion
+// Conversion
 function convertToFahrenheit() {
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = "87.8";
