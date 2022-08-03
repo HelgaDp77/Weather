@@ -51,10 +51,6 @@ h1,
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-.col-4 {
-  color: rgb(12, 70, 86);
-}
-
 .sun {
   font-size: 80px;
 }
@@ -66,33 +62,7 @@ h1,
 }
 
 h3,
-li {
-  text-align: center;
+.col-3  {
   color: rgb(16, 77, 94);
   font-size: 25px;
-}
-
-.col-sm,
-.col-3,
-.col-6 {
-  font-size: 20px;
-  color: rgb(16, 77, 94);
-}
-
-.col-3,
-container-fluid {
-  text-align: center;
-  border: 2px solid rgb(42, 18, 255);
-  border-radius: 10px;
-}
-
-ul {
-  margin: 0px auto;
-  padding: 0;
-  text-align: center;
-}
-
-col-6,
-col-4 {
-  border: 5px solid rgb(142, 247, 121);
 }
