@@ -1,63 +1,16 @@
- let humidityElement = document.querySelector(".humidity");
- 
-  humidityElement.innerHTML = response.data.main.humidity;
-
-  let windElement = document.querySelector("#wind");  
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-
-
-
-
-
-
+ // Conversion
 function convertToFahrenheit() {
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = "...";
+  temperature.innerHTML = "87.8";
 }
 let temperatureFahrenheit = document.querySelector("#fahrenheit");
 temperatureFahrenheit.addEventListener("click", convertToFahrenheit);
 function convertToCelsium() {
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = "...";
+  temperature.innerHTML = "31";
 }
-
-// Conversion
-
 let temperatureCelsium = document.querySelector("#celsium");
 temperatureCelsium.addEventListener("click", convertToCelsium);
-
-
-function displayFahrenheitTemperature(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    
-    celsium.remove("active");
-    fahrenheit.add("active");
-    
-    let fahrenheitTemperature = (celsiumTemperature * 9) / 5 + 32;
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiumTemperature(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    
-    celsium.classList.add("active");
-    fahrenheit.classList.remove("active");
-    
-    temperatureElement.innerHTML = Math.round(celsiumTemperature);
-}
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", displayFahrenheitTemperature);
-
-let celsium = document.querySelector("#celsium");
-celsium.addEventListener("click", displayCelsiumTemperature);
-
-
-
-
-
 
 // Date
 function dateTime(currDate) {
