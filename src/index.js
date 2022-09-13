@@ -197,7 +197,7 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelsiusTemperature);
 
-searchCity("Kyiv");
+searchCity("Dnipro");
 
 
 
