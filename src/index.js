@@ -120,27 +120,7 @@ function displayWeatherCondition(response) {
   getForecast(response.data.coord);
   }
 
-function displayForecast(response) {
-  let forecast = response.data.daily;
-  let forecastElement = document.querySelector("#forecast");
-     let forecastHTML = `<div class="row">`;
-    forecast.forEach(function (forecastDay, index) {
-      if (index < 6) {
-     forecastHTML = 
-    forecastHTML + 
-  `<div class="col" id="forecast-days">
-    <ul>
-      <li class="forecast-date">${formatDay(forecastDay.dt)}</li>
-      <img src="images/${forecastDay.weather[0].icon}.png";  alt="" />
-      <li class="forecast-temperature-max">${Math.round(forecastDay.temp.max)}°C</li>
-      <li class="forecast-temperature-min">${Math.round(forecastDay.temp.min)}°C</li>
-    </ul>
-  </div>`;
-    }
-    });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-     }
+
 
 function searchCity(city) {
   let apiKey = "5672206219da575792b9c579b8017620";
