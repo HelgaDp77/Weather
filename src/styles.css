@@ -96,7 +96,7 @@ a {
   font-weight: 600;
 }
 
-@media (max-width: 600px) {
+
 
   h1 {
     padding: 20px 0;
@@ -123,44 +123,4 @@ a {
   .units {
   font-size: 18px;
 }
-}
-h1,
-.temperature,
-.units {
-  color: rgb(16, 77, 94);
-  font-size: 35px;
-}
-
-.form-control {
-  background-color: #a0c1f3;
-  border-radius: 10px 10px 10px 10px;
-
-  width: 280px;
-  height: 38px;
-}
-
-.button 
-.button:hover {
-  background-color: rgb(125, 153, 255);
-}
-
-.button:active {
-  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-}
-
-.sun {
-  font-size: 80px;
-}
-
-.temp {
-  text-align: center;
-  color: rgb(16, 77, 94);
-  font-size: 20px;
-}
-
-h3,
-.col-3  {
-  color: rgb(16, 77, 94);
-  font-size: 25px;
 }
