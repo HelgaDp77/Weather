@@ -119,13 +119,17 @@ color:#1187a7;
   width: 80%;
 }
 
-  .city, .forecast {
+  .city {
   font-size: 40px;
   color:#104d5e;  
 }
 
   .temperature {
   font-size: 30px;
+}
+.forecast {
+  font-size: 25px;
+  color:#104d5e;  
 }
 
   .units {
