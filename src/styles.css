@@ -52,7 +52,7 @@ ul {
   font-size: 40px;
   line-height: 1.5em;
   margin-bottom: 20px;
-  color:rgb(16, 77, 94);
+  color:#104d5e;
 }
 
 .temperature {
@@ -67,7 +67,7 @@ ul {
 }
 
 .temperature .active {
-  color: black;
+  color:#104d5e; 
   cursor: default;
 }
 
@@ -97,7 +97,9 @@ a {
   font-weight: 600;
 }
 
-
+.weather {
+ color:#104d5e; 
+}
 
   h1 {
     padding: 20px 0;
