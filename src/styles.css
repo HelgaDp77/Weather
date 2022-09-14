@@ -52,6 +52,7 @@ ul {
   font-size: 40px;
   line-height: 1.5em;
   margin-bottom: 20px;
+  color:rgb(16, 77, 94);
 }
 
 .temperature {
@@ -100,6 +101,7 @@ a {
 
   h1 {
     padding: 20px 0;
+    color:rgb(16, 77, 94);
 }
 
   .results {
