@@ -11,6 +11,7 @@
 
 .form-control {
   box-shadow: #cfe4e9 0px 8px 8px 0;
+   background-color: #a0c1f3;
 }
 button {
   border-radius: 10px 10px 10px 10px;
@@ -49,19 +50,20 @@ ul {
 }
 
 .city {
-  font-size: 40px;
+  font-size: 60px;
   line-height: 1.5em;
   margin-bottom: 20px;
   color:#104d5e;
 }
 
 .temperature {
-  font-size: 40px;
+  font-size: 60px;
   margin-bottom: 20px;
+  color:#104d5e;
 }
 
 .units {
-  font-size: 20px;
+  font-size: 40px;
   position: relative;
   top: -15px;
 }
@@ -104,7 +106,7 @@ color:#1187a7;
 
   h1 {
     padding: 20px 0;
-    color:rgb(16, 77, 94);
+    color:#104d5e;
 }
 
   .results {
@@ -118,15 +120,15 @@ color:#1187a7;
 }
 
   .city {
-  font-size: 26px;
+  font-size: 40px;
   color:#104d5e;  
 }
 
   .temperature {
-  font-size: 26px;
+  font-size: 40px;
 }
 
   .units {
-  font-size: 18px;
+  font-size: 40px;
 }
 }
