@@ -119,7 +119,7 @@ color:#1187a7;
   width: 80%;
 }
 
-  .city {
+  .city, .forecast {
   font-size: 40px;
   color:#104d5e;  
 }
