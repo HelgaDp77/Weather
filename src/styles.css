@@ -95,8 +95,11 @@ a {
   font-weight: 600;
 }
 
-.weather, .name, .code {
+.weather, .name {
  color:#104d5e; 
+}
+.code {
+color:#1187a7; 
 }
 
   h1 {
