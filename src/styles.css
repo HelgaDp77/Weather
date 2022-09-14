@@ -95,7 +95,7 @@ a {
   font-weight: 600;
 }
 
-.weather {
+.weather, .name, .code {
  color:#104d5e; 
 }
 
