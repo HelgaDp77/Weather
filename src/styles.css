@@ -127,12 +127,12 @@ color:#1187a7;
   .temperature {
   font-size: 30px;
 }
-.forecast {
-  font-size: 25px;
+.forecast, .time {
+  font-size: 20px;
   color:#104d5e;  
 }
 
   .units {
-  font-size: 30px;
+  font-size: 20px;
 }
 }
